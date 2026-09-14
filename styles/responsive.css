@@ -1,0 +1,73 @@
+@media screen and (max-width: 1400px){
+
+}
+@media screen and (max-width: 1200px){
+
+}
+@media screen and (max-width: 992px){
+    .menu__item{
+        margin-left: 2rem;
+        font-size: 1.4rem;
+    }
+    .nav__logo{
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .menu__item{
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .nav__logo{
+        font-size: 3.5rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .menu__item{
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+    .menu{
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--section-bg-color);
+        transition: all 300ms ease-in;
+        -webkit-transition: all 300ms ease-in;
+        -moz-transition: all 300ms ease-in;
+        -ms-transition: all 300ms ease-in;
+        -o-transition: all 300ms ease-in;
+    }
+    .menu--open{
+        height: 28rem;
+    }
+    .nav__toggle-icon{
+        display: flex;
+    }
+    .cover{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 10%);
+    z-index: -1;
+    opacity: 0;
+    transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    }
+    .cover--show{
+        opacity: 1;
+        z-index: 99;
+    }
+}

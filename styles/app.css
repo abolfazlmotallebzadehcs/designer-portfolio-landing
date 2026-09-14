@@ -1,0 +1,145 @@
+@import "normalize.css";
+@import "grid.css";
+@import "fonts.css";
+
+:root{
+    --text-color: #333333;
+    --app-bg: #fff;
+    --section-bg-color: #fff;
+    --primary-color: #0ABEAD;
+}
+
+/*
+!!!!!!!!!!
+          Reset Styles
+!!!!!!!!!!
+*/
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/*
+!!!!!!!!!!
+          App Styles
+!!!!!!!!!!
+*/
+html{
+    font-size: 10px;
+}
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/*
+!!!!!!!!!!
+          Header
+!!!!!!!!!!
+*/
+
+.header{
+    background-color: var(--section-bg-color);
+    box-shadow: 0 0.5rem 4rem rgba(4, 194, 255, 0.16);
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.nav__logo{
+    color: var(--primary-color);
+    font-family: "Poppins Black";
+    font-size: 6rem;
+    margin: 0;
+}
+.menu{
+    display: flex;
+    z-index: 100;
+    align-items: center;
+
+}
+.menu__item{
+    margin-left: 4rem;
+}
+.menu__item:first-child{
+    margin-left: 0;
+}
+.menu__link{
+    display: inline-block;
+    color: var(--text-color);
+    font-family: "Poppins Medium";
+    -webkit-transition: color 150ms ease-in;
+    -moz-transition: color 150ms ease-in;
+    -ms-transition: color 150ms ease-in;
+    -o-transition: color 150ms ease-in;
+    transition: color 150ms ease-in;
+}
+.menu__link:hover{
+    color: var(--primary-color);
+}
+.nav__toggle-icon{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+}
+.nav__toggle-line{
+    position: relative;
+}
+.nav__toggle-line,
+.nav__toggle-line::before,
+.nav__toggle-line::after{
+    content: " ";
+    width: 4.5rem;
+    height: 0.4rem;
+    background-color: var(--primary-color);
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border-radius: 2rem;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+.nav__toggle-line::before{
+    position: absolute;
+    top: 1rem;
+}
+.nav__toggle-line::after{
+    position: absolute;
+    bottom: 1rem;
+}
+.nav__toggle-icon--open .nav__toggle-line::after{
+    transform: translateY(1rem) rotate(45deg);
+    -webkit-transform: translateY(1rem) rotate(45deg);
+    -moz-transform: translateY(1rem) rotate(45deg);
+    -ms-transform: translateY(1rem) rotate(45deg);
+    -o-transform: translateY(1rem) rotate(45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line::before{
+    transform: translateY(-1rem) rotate(-45deg);
+    -webkit-transform: translateY(-1rem) rotate(-45deg);
+    -moz-transform: translateY(-1rem) rotate(-45deg);
+    -ms-transform: translateY(-1rem) rotate(-45deg);
+    -o-transform: translateY(-1rem) rotate(-45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line{
+    background-color: transparent;
+}
