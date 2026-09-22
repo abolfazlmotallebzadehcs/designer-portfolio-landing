@@ -48,7 +48,7 @@ ul {
   border-radius: 4rem;
 }
 .app-btn--orange {
-  background-color: var(--orange-color);
+  background-color: #f57f17;
   box-shadow: 0 1.5rem 4rem rgba(245, 127, 23, 24%);
 }
 .section-head {
@@ -100,6 +100,16 @@ ul {
 
 .align-items-center {
   align-items: center;
+}
+.skew-reset{
+  -webkit-transform: skewY(6deg);
+  -moz-transform: skewY(6deg);
+  -ms-transform: skewY(6deg);
+  -o-transform: skewY(6deg);
+  transform: skewY(6deg);
+}
+.h-full{
+  height: 100%;
 }
 
 /*
@@ -345,7 +355,7 @@ body {
   margin: auto;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: var(--orange-color);
+  background-color: #f57f17;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -374,7 +384,7 @@ body {
 */
 
 .services{
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 .service{
   color: #fff;
@@ -420,4 +430,157 @@ body {
   left: 0;
   width: 100%;
   z-index: -5;
+}
+
+/*
+!!!!!!!!!!
+          Resume
+!!!!!!!!!!
+*/
+
+.resume{
+  margin-top: 10rem;
+  box-shadow: 0 0 6rem rgba(19, 182, 255, 24%);
+  margin-bottom: 10rem;
+  padding: 10rem 0;
+  -webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg);
+  transform: skewY(-6deg);
+  background-color: var(--section-bg-color);
+}
+.resume-list{
+  background-color: var(--app-bg-color);
+  box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 42rem;
+  padding: 4rem 0;
+}
+.resume-list::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  width: 4rem;
+  z-index: -1;
+}
+.resume-list__item{
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.resume-list__item::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  width: 6rem;
+  z-index: -1;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  max-width: 26rem;
+}
+.resume-list__item--active{
+  color: #fff;
+}
+.resume-list__item--active::before{
+  width: 100%;
+}
+.resume-list__icon{
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.8rem;
+}
+.resume-list__text{
+  font-family: "Poppins SemiBold";
+  font-size: 1.8rem;
+  margin-left: 3rem;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.resume-content{
+  border-left: .25rem solid var(--primary-color);
+  display: none;
+  padding-left: 3rem;
+  margin-left: 4rem;
+  min-height: 42rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+.resume-content--show{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.resume-content__item{
+
+}
+.resume-content__head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume-content__title{
+  color: #FF5823;
+  font-family: "Poppins SemiBold";
+  font-size: 1.8rem;
+  margin: 0;
+  position: relative;
+}
+.resume-content__title::before{
+  content: "";
+  position: absolute;
+  left: -4rem;
+  top: 0;
+  bottom: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  background-color: var(--primary-color);
+  margin: auto;
+}
+.resume-content__date{
+  background-color: #F57F17;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border-radius: 2rem;
+  padding: 0.2rem 1.5rem;
+  color: #fff;
+  box-shadow: 0 0 4rem rgba(245,127,23,24%);
+}
+.resume-content__subtitle{
+  font-family: "Poppins SemiBold";
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+.resume-content__description{
+  margin: 0;
 }
