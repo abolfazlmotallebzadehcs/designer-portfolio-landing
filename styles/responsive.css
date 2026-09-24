@@ -201,7 +201,7 @@
   }
 }
 
-@media screen and (max-width: 458px) {
+@media screen and (max-width: 457px) {
   .home__title {
     font-size: 3rem;
   }
