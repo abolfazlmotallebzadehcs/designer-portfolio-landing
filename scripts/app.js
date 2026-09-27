@@ -4,27 +4,22 @@ const cover = document.querySelector('.cover');
 const resumeListItems = document.querySelectorAll(".resume-list__item")
 const portfolioListItems = document.querySelectorAll('.portfolio-list__item')
 
+const navigationTabsInit = (listItems,listItemActiveClass,contentItemShowClass)=>{
+    listItems.forEach(listItem=>{
+        listItem.addEventListener('click',()=>{
+            document.querySelector(`.${listItemActiveClass}`).classList.remove(listItemActiveClass);
+            listItem.classList.add(listItemActiveClass);
+            document.querySelector(`.${contentItemShowClass}`).classList.remove(contentItemShowClass);
+            let ContentId = resumeListItem.getAttribute('data-content-id');
+            document.querySelector(ContentId).classList.add(contentItemShowClass);
+        })
+    })
+}
+
 navToggleIcon.addEventListener('click', ()=>{
     navToggleIcon.classList.toggle('nav__toggle-icon--open');
     menu.classList.toggle('menu--open');
     cover.classList.toggle('cover--show')
 });
-
-resumeListItems.forEach(resumeListItem => {
-    resumeListItem.addEventListener('click',()=>{
-        document.querySelector('.resume-list__item--active').classList.remove('resume-list__item--active');
-        resumeListItem.classList.add('resume-list__item--active');
-        document.querySelector('.resume-content--show').classList.remove('resume-content--show');
-        let ContentId = resumeListItem.getAttribute('data-content-id');
-        document.querySelector(ContentId).classList.add('resume-content--show');
-    })
-});
-portfolioListItems.forEach(portfolioListItem => {
-    portfolioListItem.addEventListener('click',()=>{
-        document.querySelector('.portfolio-list__item--active').classList.remove('portfolio-list__item--active');
-        portfolioListItem.classList.add('portfolio-list__item--active');
-        document.querySelector('.portfolio-content--show').classList.remove('portfolio-content--show');
-        let ContentId = portfolioListItem.getAttribute('data-content-id');
-        document.querySelector(ContentId).classList.add('portfolio-content--show');
-    })
-});
+navigationTabsInit(resumeListItems, "resume-list__item--active", "resume-content--show");
+navigationTabsInit(portfolioListItems, "portfolio-list__item--active", "portfolio-content--show");
