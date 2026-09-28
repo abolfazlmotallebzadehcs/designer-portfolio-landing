@@ -67,6 +67,14 @@
     min-height: 62rem;
     margin-left: 1rem;
   }
+  .footer__wrapper{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer__copy-right{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .menu__item {
@@ -209,6 +217,9 @@
   .service {
     padding: 10rem 5rem;
   }
+  .footer__copy-right{
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 457px) {
@@ -236,6 +247,9 @@
   }
   .service {
     padding: 8rem 4rem;
+  }
+  .footer__copy-right{
+    max-width: 23rem;
   }
 }
 

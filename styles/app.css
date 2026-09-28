@@ -726,7 +726,7 @@ body {
 
 /*
 !!!!!!!!!!
-          contact us
+          Contact Us
 !!!!!!!!!!
 */
 
@@ -798,4 +798,47 @@ body {
   box-shadow: none;
   font-size: 2rem;
   cursor: pointer;
+}
+
+/*
+!!!!!!!!!!
+          Footer
+!!!!!!!!!!
+*/
+
+.footer{
+  padding: 2rem 0;
+  background-color: var(--app-bg-color);
+}
+.footer__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copy-right{
+  letter-spacing: .5rem;
+  font-family: "Poppins SemiBold";
+  color: var(--text-color);
+
+}
+.footer__socials{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer__social{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #1F2935;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social:hover{
+  background-color: var(--primary-color);
+}
+.footer__social svg{
+  fill: var(--app-bg-color);
 }
