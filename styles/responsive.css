@@ -125,6 +125,16 @@
     box-shadow: none;
     background-color: transparent;
   }
+  .contactus__wrapper{
+    height: 90rem;
+  }
+  .contactus__wrapper .container{
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .contact{
+    width: 100%;
+  }
 }
 @media screen and (max-width: 576px) {
   .menu__item {

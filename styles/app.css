@@ -723,3 +723,79 @@ body {
   background-color: #F5276C;
   box-shadow: 0 1.5rem 4rem rgba(245, 39, 108, 24%);
 }
+
+/*
+!!!!!!!!!!
+          contact us
+!!!!!!!!!!
+*/
+
+
+.contactus{
+  margin-top: 20rem;
+}
+.contactus__wrapper{
+  background-image: url('../images/map.jpg');
+  background-size: cover;
+  height: 80rem;
+  
+}
+.contactus__wrapper .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.contactus__map{
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  background-color: var(--app-bg-color);
+  box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactus__icon{
+}
+.contact{
+  background-color: var(--app-bg-color);
+  box-shadow: 0 0 4rem rgba(19, 182, 255, 24%);
+  width: 57rem;
+  height: 70rem;
+  padding: 5rem 4rem;
+}
+.contact__title{
+  font-family: "Poppins Bold";
+  font-size: 3.2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+.contact__form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.contact__input{
+  box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
+  border: none;
+  outline: none;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+  color: var(--text-color);
+}
+.contact__input::placeholder{
+  color: inherit;
+}
+.contact__input--textarea{
+  resize: none;
+}
+.contact__submit{
+  border: none;
+  outline: none;
+  width: 100%;
+  box-shadow: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
