@@ -167,9 +167,12 @@ body {
 .menu__item:first-child {
   margin-left: 0;
 }
+.menu__item--active{
+  color: var(--primary-color);
+}
 .menu__link {
   display: inline-block;
-  color: var(--text-color);
+  color: inherit;
   font-family: "Poppins Medium";
   -webkit-transition: color 150ms ease-in;
   -moz-transition: color 150ms ease-in;
@@ -307,7 +310,7 @@ body {
 */
 
 .aboutus {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 .about {
   display: flex;
@@ -324,7 +327,7 @@ body {
 }
 .about__content {
   flex-basis: 50%;
-  padding: 4rem;
+  padding: 3rem;
 }
 .about__title {
   font-family: "Poppins SemiBold";
@@ -384,7 +387,7 @@ body {
 */
 
 .services{
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 .service{
   color: #fff;
@@ -407,22 +410,27 @@ body {
 }
 .service--purple{
   background-color: #8540ff;
-  
+  box-shadow: 0 0 4rem rgba(118,13, 255, 35%);
 }
 .service--yellow{
   background-color: #FFC50C;
+  box-shadow: 0 0 4rem rgba(255,197, 12, 35%);
 }
 .service--pink{
   background-color: #EC407A;
+  box-shadow: 0 0 4rem rgba(236,64, 122, 35%);
 }
 .service--orange{
   background-color: #FF6331;
+  box-shadow: 0 0 4rem rgba(255,99, 49, 35%);
 }
 .service--blue{
   background-color: #13B6FF;
+  box-shadow: 0 0 4rem rgba(19,182, 255, 35%);
 }
 .service--green{
   background-color: #49AF46;
+  box-shadow: 0 0 4rem rgba(73,175,70, 35%);
 }
 .service__wave{
   position: absolute;
@@ -439,9 +447,9 @@ body {
 */
 
 .resume{
-  margin-top: 10rem;
+  margin-top: 8rem;
   box-shadow: 0 0 6rem rgba(19, 182, 255, 24%);
-  padding: 10rem 0;
+  padding: 1rem 0 8rem 0;
   -webkit-transform: skewY(-6deg);
   -moz-transform: skewY(-6deg);
   -ms-transform: skewY(-6deg);
@@ -592,8 +600,8 @@ body {
 
 
 .portfolio{
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin: 8rem 0;
+  padding: 0 0 8rem 0;
 }
 .portfolio-list{
   display: flex;
@@ -648,9 +656,9 @@ body {
 */
 
 .pricing{
-  margin-top: 10rem;
+  margin: 8rem 0;
   box-shadow: 0 0 6rem rgba(19, 182, 255, 24%);
-  padding: 10rem 0 15rem 0;
+  padding: 1rem 0 8rem 0;
   -webkit-transform: skewY(-6deg);
   -moz-transform: skewY(-6deg);
   -ms-transform: skewY(-6deg);
@@ -732,7 +740,7 @@ body {
 
 
 .contactus{
-  margin-top: 20rem;
+  margin-top: 8rem;
 }
 .contactus__wrapper{
   background-image: url('../images/map.jpg');

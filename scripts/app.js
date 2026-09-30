@@ -1,21 +1,26 @@
 const navToggleIcon = document.querySelector('.nav__toggle-icon');
 const menu = document.querySelector(".menu");
 const cover = document.querySelector('.cover');
-const resumeListItems = document.querySelectorAll(".resume-list__item")
-const portfolioListItems = document.querySelectorAll('.portfolio-list__item')
+const resumeListItems = document.querySelectorAll(".resume-list__item");
+const portfolioListItems = document.querySelectorAll('.portfolio-list__item');
+const menuItems = document.querySelectorAll('.menu__item');
+const sections = document.querySelectorAll('main > section');
+
+const removeActiveClass =(className) => {
+    document.querySelector(`.${className}`).classList.remove(className);
+};
 
 const navigationTabsInit = (listItems,listItemActiveClass,contentItemShowClass)=>{
     listItems.forEach(listItem=>{
         listItem.addEventListener('click',()=>{
-            document.querySelector(`.${listItemActiveClass}`).classList.remove(listItemActiveClass);
+            removeActiveClass(listItemActiveClass);
             listItem.classList.add(listItemActiveClass);
-            document.querySelector(`.${contentItemShowClass}`).classList.remove(contentItemShowClass);
-            let ContentId = resumeListItem.getAttribute('data-content-id');
+            removeActiveClass(contentItemShowClass);
+            let ContentId = listItem.getAttribute('data-content-id');
             document.querySelector(ContentId).classList.add(contentItemShowClass);
         })
     })
 }
-
 navToggleIcon.addEventListener('click', ()=>{
     navToggleIcon.classList.toggle('nav__toggle-icon--open');
     menu.classList.toggle('menu--open');
@@ -23,3 +28,33 @@ navToggleIcon.addEventListener('click', ()=>{
 });
 navigationTabsInit(resumeListItems, "resume-list__item--active", "resume-content--show");
 navigationTabsInit(portfolioListItems, "portfolio-list__item--active", "portfolio-content--show");
+menuItems.forEach(item=>{
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        removeActiveClass('menu__item--active');
+        item.classList.add('menu__item--active');
+        let sectionClass = item.getAttribute("data-section");
+        let sectionOffsetTop = document.querySelector(`.${sectionClass}`).offsetTop;
+        window.scrollTo({
+            top: sectionOffsetTop-125,
+            behavior: "smooth"
+        })
+    })
+});
+const observerHandler = (allSections) => {
+    allSections.map(section=>{
+        let sectionClassName = section.target.className;
+        let sectionMenuItem = document.querySelector(`.menu__item[data-section=${sectionClassName}]`);
+        if(section.isIntersecting){
+            sectionMenuItem.classList.add('menu__item--active');
+        } else {
+            sectionMenuItem.classList.remove('menu__item--active');
+        }
+    });
+};
+const observer = new IntersectionObserver(observerHandler, {
+    threshold: 0.5
+});
+sections.forEach(section=>{
+    observer.observe(section)
+});

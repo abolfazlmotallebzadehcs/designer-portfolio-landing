@@ -75,6 +75,12 @@
     margin-top: 2rem;
     font-size: 1.2rem;
   }
+  .portfolio-list{
+    padding: 0;
+  }
+  .portfolio-list__item{
+    padding: 1rem 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .menu__item {
@@ -127,11 +133,15 @@
     padding: 1rem;
     flex-direction: row;
     min-height: auto;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     box-shadow: none;
     background-color: transparent;
+  }
+  .resume-list__text{
+    font-family: "Poppins";
+    font-size: 1.6rem;
   }
   .contactus__wrapper{
     height: 90rem;
@@ -223,6 +233,29 @@
 }
 
 @media screen and (max-width: 457px) {
+  .home{
+    padding-top: 1rem;
+    height: 70rem;
+  }
+  .aboutus {
+    margin-top: 6rem;
+  }
+  .services{
+    margin-top: 6rem;
+  }
+  .resume{
+    margin-top: 6rem;
+  }
+  .portfolio {
+    margin: 6rem 0 0 0;
+    padding: 0;
+  }
+  .pricing {
+    margin: 6rem 0 0 0;
+  }
+  .contactus{
+    margin-top: 6rem;
+  }
   .home__title {
     font-size: 3rem;
   }
