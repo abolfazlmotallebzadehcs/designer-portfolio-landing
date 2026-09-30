@@ -1814,6 +1814,9 @@ body {
   .contact {
     width: 100%;
   }
+  *{
+    cursor: default !important;
+  }
 }
 @media screen and (max-width: 576px) {
   .menu__item {
